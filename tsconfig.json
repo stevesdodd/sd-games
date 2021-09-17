@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+		"module": "es2020",
+		"outDir": "build",
+    "rootDir": "./",
+		"removeComments": true,
+    "moduleResolution": "node",
+    "jsx": "react"
+  },
+  "include": [
+    "game1/**/*.ts",
+    "game2/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "stephendoddgames",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:index": "copyfiles \"./index.html\" build/",
+    "build:filesGame1": "copyfiles -u 1 \"game1/**/*.js\" \"game1/**/*.html\" build/game1",
+    "build:filesGame2": "copyfiles -u 1 \"game2/**/*.js\" \"game2/**/*.html\" build/game2",
+    "build:tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevesdodd/stephendoddgames.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevesdodd/stephendoddgames/issues"
+  },
+  "homepage": "https://github.com/stevesdodd/stephendoddgames#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "typescript": "^4.4.3"
+  }
+}

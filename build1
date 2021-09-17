@@ -1,0 +1,5 @@
+npm run build:index
+npm run build:filesGame1
+npm run build:filesGame2
+npm run build:tsc
+
