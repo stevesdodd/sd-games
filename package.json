@@ -1,26 +1,25 @@
 {
-  "name": "stephendoddgames",
+  "name": "sd-games",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "build:index": "copyfiles \"./index.html\" build/",
-    "build:filesGame1": "copyfiles -u 1 \"game1/**/*.js\" \"game1/**/*.html\" build/game1",
-    "build:filesGame2": "copyfiles -u 1 \"game2/**/*.js\" \"game2/**/*.html\" build/game2",
-    "build:tsc": "tsc",
+    "serve": "http-server build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevesdodd/stephendoddgames.git"
+    "url": "git+https://github.com/stevesdodd/sd-games.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stevesdodd/stephendoddgames/issues"
+    "url": "https://github.com/stevesdodd/sd-games/issues"
   },
-  "homepage": "https://github.com/stevesdodd/stephendoddgames#readme",
+  "homepage": "https://github.com/stevesdodd/sd-games#readme",
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "http-server": "^13.0.2",
     "typescript": "^4.4.3"
   }
 }
