@@ -1,14 +1,17 @@
 #!/bin/bash
 set -euo pipefail
 
-cd basic-typescript-env
-rm -rf build
-npm run build
-cd ..
-
 rm -rf build
 mkdir build
-
-cp -R basic-typescript-env/build build/basic-typescript-env
-
 npm run build:index
+
+for k in $(jq '.tutorials | keys | .[]' tutorials.json); do
+  name=$(jq -r ".tutorials[$k].name" tutorials.json);
+  link=$(jq -r ".tutorials[$k].link" tutorials.json);
+
+  cd $link
+  rm -rf build
+  npm run build
+  cd ..
+  cp -R "${link}/build" "build/${link}"
+done
