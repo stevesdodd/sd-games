@@ -3,6 +3,10 @@
     {
     "name": "Basic javascript env",
     "link": "basic-javascript-env"
-    }
+    },
+    {
+      "name": "Basic typescript env",
+      "link": "basic-typescript-env"
+      }
   ]
 }

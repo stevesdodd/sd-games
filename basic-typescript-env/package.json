@@ -1,0 +1,17 @@
+{
+  "name": "basic-javascript-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build && tsc && cp src/index.html build",    "start": "node build/index.js",
+    "serve": "http-server build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^13.0.2",
+    "typescript": "^4.4.3"
+  }
+}
