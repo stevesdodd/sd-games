@@ -7,6 +7,10 @@
     {
       "name": "Basic typescript env",
       "link": "basic-typescript-env"
-      }
+    },
+    {
+      "name": "Canvas operations",
+      "link": "canvas-operations"
+    }
   ]
 }
