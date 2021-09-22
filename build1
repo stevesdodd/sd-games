@@ -14,4 +14,14 @@ for k in $(jq '.tutorials | keys | .[]' tutorials.json); do
   npm run build
   cd ..
   cp -R "${link}/build" "build/${link}"
+
+  # Add name
+  sed -i '' -e "/<\/head>/p; s/<\/head>/<h2>${name}<\/h2>/" build/${link}/index.html 
+
+  # Add back link
+  sed -i '' -e '/<\/head>/p; s/<\/head>/<a href=\"..\/\">Back<\/a>/' build/${link}/index.html 
+
+  # Add header  
+  sed -i '' -e '/<\/head>/p; s/<\/head>/<div style="margin-bottom: 2rem; background: rgb(255,207,160); background: linear-gradient(180deg, rgba(255,207,160,1) 10%, rgba(246,151,29,1) 93%); height: 140px; display: flex; justify-content: center; align-items: center;" id="header"><h2 style="color: white; font-size: 3rem;">SD Games<\/h2><\/div>/' build/${link}/index.html 
+
 done
