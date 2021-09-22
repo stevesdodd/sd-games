@@ -3,19 +3,49 @@ fetch('./tutorials.json')
   .then(data => {
 
     const tutorialsDiv = document.getElementById("tutorials");
-    const newDiv = document.createElement("div");
+
 
     data.tutorials.forEach(tutorial => {
 
-      let a = document.createElement('a');
-      a.setAttribute('href',tutorial.link);
-      a.innerHTML = tutorial.name;
+      const newDiv = document.createElement("div");
+      newDiv.style.padding = "1rem"
+      newDiv.style.border = "2px solid gray"
+      newDiv.style.margin = "1rem"
+      newDiv.style.display = "flex"
+      newDiv.style.justifyContent = "center"
 
-      newDiv.appendChild(a);
+      let p = document.createElement('p')
+      p.innerHTML = tutorial.name
+      p.style.padding = 0
+      p.style.margin = 0
+
+      let linkA = document.createElement('a');
+      linkA.setAttribute('href',tutorial.link);
+      linkA.innerHTML = 'Example'
+
+      let codeA = document.createElement('a')
+      codeA.setAttribute('href', 'https://github.com/stevesdodd/sd-games/tree/master/'+tutorial.link)
+      codeA.innerHTML = 'Code'
+
+      codeA.style.padding= "4px";
+      codeA.style.margin = "4px";
+      codeA.style.background = "lightBlue";
+      codeA.style.borderRadius = "4px"
+      codeA.style.textDecoration = "none"
+
+      linkA.style.padding= "4px";
+      linkA.style.margin = "4px";
+      linkA.style.background = "lightBlue";
+      linkA.style.borderRadius = "4px"
+      linkA.style.textDecoration = "none"
+
+      newDiv.appendChild(p)
+      newDiv.appendChild(linkA);
+      newDiv.appendChild(codeA)
+
+      tutorialsDiv.appendChild(newDiv, tutorialsDiv);
+
     })
-
-    document.body.insertBefore(newDiv, tutorialsDiv);
 
   })
   .catch(error => console.log(error));
-
