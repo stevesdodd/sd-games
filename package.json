@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:index": "copyfiles \"./index.html\" \"index.js\" \"tutorials.json\" build/",
+    "build:index": "copyfiles \"./index.html\" \"index.js\" \"tutorials.json\" \"favicon.ico\" build/",
     "serve": "http-server build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
