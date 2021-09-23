@@ -33,13 +33,6 @@ var drawFillCircle = function (context, x, y, radius, color) {
     context.fill();
     context.closePath();
 };
-var drawStrokeCircle = function (context, x, y, radius, color) {
-    context.beginPath();
-    context.strokeStyle = color;
-    context.arc(x, y, radius, 0, Math.PI * 2);
-    context.stroke();
-    context.closePath();
-};
 var drawRoad = function (context) {
     context.fillStyle = 'gray';
     context.fillRect(0, canvas.height - 50, canvas.width, 50);
@@ -88,10 +81,8 @@ var draw = function (context) {
     context.fillRect(carPosX, BonnetHeight, carWidth, baseHeight - BonnetHeight);
     drawFillCircle(context, wheel1CenterX, wheel1CenterY, 50, 'black');
     drawFillCircle(context, wheel1CenterX, wheel1CenterY, 40, 'gray');
-    drawStrokeCircle(context, wheel1CenterX, wheel1CenterY, 5, 'black');
     drawFillCircle(context, wheel2CenterX, wheel2CenterY, 50, 'black');
     drawFillCircle(context, wheel2CenterX, wheel2CenterY, 40, 'gray');
-    drawStrokeCircle(context, wheel2CenterX, wheel2CenterY, 5, 'black');
     drawRoof(context, 'red', 0);
     drawRoof(context, '#99f6ff', 15);
     drawWindowGap(context);
