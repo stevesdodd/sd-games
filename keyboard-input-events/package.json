@@ -1,12 +1,11 @@
 {
-  "name": "canvas-operations",
+  "name": "keyboard-input-events",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && tsc && cp src/index.html build && cp src/cloud-large.png build",
-    "start": "node build/index.js",
+    "build": "rm -rf build && tsc && cp src/index.html build",    "start": "node build/index.js",
     "serve": "http-server build"
   },
   "author": "",

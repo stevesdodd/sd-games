@@ -42,14 +42,6 @@ const drawFillCircle = (context: CanvasRenderingContext2D, x: number, y: number,
   context.closePath();
 }
 
-const drawStrokeCircle = (context: CanvasRenderingContext2D, x: number, y: number, radius: number, color: string) => {
-  context.beginPath();
-  context.strokeStyle = color;
-  context.arc(x, y, radius, 0, Math.PI*2);
-  context.stroke();
-  context.closePath();
-}
-
 const drawRoad = (context: CanvasRenderingContext2D) => {
   context.fillStyle = 'gray'
   context.fillRect(0, canvas.height - 50, canvas.width, 50)
@@ -98,7 +90,7 @@ const drawWindowGap = (context: CanvasRenderingContext2D) => {
 }
 
 const draw = (context: CanvasRenderingContext2D) => {
-
+ 
   drawGradientBackground(context)
   drawRoad(context)
 
@@ -107,11 +99,9 @@ const draw = (context: CanvasRenderingContext2D) => {
 
   drawFillCircle(context, wheel1CenterX, wheel1CenterY, 50, 'black')
   drawFillCircle(context, wheel1CenterX, wheel1CenterY, 40, 'gray')
-  drawStrokeCircle(context, wheel1CenterX, wheel1CenterY, 5, 'black') 
 
   drawFillCircle(context, wheel2CenterX, wheel2CenterY, 50, 'black')
   drawFillCircle(context, wheel2CenterX, wheel2CenterY, 40, 'gray')
-  drawStrokeCircle(context, wheel2CenterX, wheel2CenterY, 5, 'black')
 
   drawRoof(context, 'red', 0)
   drawRoof(context, '#99f6ff', 15)
