@@ -11,6 +11,10 @@
     {
       "name": "Canvas operations",
       "link": "canvas-operations"
+    },
+    {
+      "name": "Keyboard input events",
+      "link": "keyboard-input-events"
     }
   ]
 }
