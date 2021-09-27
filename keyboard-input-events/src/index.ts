@@ -37,6 +37,6 @@ const draw = () => {
   }
 }
 
+draw()
 document.addEventListener('keyup', keyUpHandler, false)
 document.addEventListener('keydown', keyDownHandler, false)
-draw()

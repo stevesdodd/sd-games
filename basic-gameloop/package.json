@@ -1,11 +1,11 @@
 {
-  "name": "keyboard-input-events",
+  "name": "basic-gameloop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && tsc && cp src/index.html build",    
+    "build": "rm -rf build && tsc && cp src/index.html build && cp favicon.ico build",
     "start": "node build/index.js",
     "serve": "http-server build"
   },
