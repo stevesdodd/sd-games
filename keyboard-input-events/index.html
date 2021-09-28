@@ -6,11 +6,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <style>* { padding: 0; margin: 0; } canvas { border: 2px solid red; display: block; margin: 0 auto; }</style>
   </head>
-  <div style="margin-bottom: 2rem; background: rgb(255,207,160); background: linear-gradient(180deg, rgba(255,207,160,1) 10%, rgba(246,151,29,1) 93%); height: 140px; display: flex; justify-content: center; align-items: center;" id="header"><h2 style="color: white; font-size: 3rem;">SD Games</h2></div>
-  <a href="../">Back</a>
-  <h2>Keyboard input events</h2>
+  <div id="header" style="margin-bottom: 2rem; background: rgb(255,207,160); background: linear-gradient(180deg, rgba(255,207,160,1) 10%, rgba(246,151,29,1) 93%); height: 140px; display: flex; justify-content: center; align-items: center;" class="hide"><h2 style="color: white; font-size: 3rem;">SD Games</h2></div>
+  <a class="hide" href="../">Back</a>
+  <h2 class='hide'>Keyboard input events</h2>
   <body>
     <canvas id="gameCanvas" style="width: 95%; max-width: 850px"></canvas>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.js"></script><script>const path = window.location.href; if (path.includes("hide")) { const a = document.getElementsByClassName("hide"); for (var i = 0; i < a.length; i++) { a[i].style.display = "none";}; }</script>
   </body>
 </html>
