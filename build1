@@ -21,12 +21,15 @@ for k in $(jq '.tutorials | keys | .[]' tutorials.json); do
   cp -R "${link}/build" "build/${link}"
 
   # Add name
-  sed $SEDOPTION -e "/<\/head>/p; s/<\/head>/<h2>${name}<\/h2>/" build/${link}/index.html 
+  sed $SEDOPTION -e "/<\/head>/p; s/<\/head>/<h2 class='hide'>${name}<\/h2>/" build/${link}/index.html 
 
   # Add back link
-  sed $SEDOPTION -e '/<\/head>/p; s/<\/head>/<a href=\"..\/\">Back<\/a>/' build/${link}/index.html 
+  sed $SEDOPTION -e '/<\/head>/p; s/<\/head>/<a class="hide" href=\"..\/\">Back<\/a>/' build/${link}/index.html 
 
   # Add header  
-  sed $SEDOPTION -e '/<\/head>/p; s/<\/head>/<div style="margin-bottom: 2rem; background: rgb(255,207,160); background: linear-gradient(180deg, rgba(255,207,160,1) 10%, rgba(246,151,29,1) 93%); height: 140px; display: flex; justify-content: center; align-items: center;" id="header"><h2 style="color: white; font-size: 3rem;">SD Games<\/h2><\/div>/' build/${link}/index.html 
+  sed $SEDOPTION -e '/<\/head>/p; s/<\/head>/<div id="header" style="margin-bottom: 2rem; background: rgb(255,207,160); background: linear-gradient(180deg, rgba(255,207,160,1) 10%, rgba(246,151,29,1) 93%); height: 140px; display: flex; justify-content: center; align-items: center;" class="hide"><h2 style="color: white; font-size: 3rem;">SD Games<\/h2><\/div>/' build/${link}/index.html 
+
+  # Remove hidable elements
+  sed $SEDOPTION -e 's/<\/script>/<\/script><script>const path = window.location.href; if (path.includes("hide")) { const a = document.getElementsByClassName("hide"); for (var i = 0; i < a.length; i++) { a[i].style.display = "none";}; }<\/script>/' build/${link}/index.html 
 
 done
