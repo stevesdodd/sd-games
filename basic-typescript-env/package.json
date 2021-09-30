@@ -8,7 +8,7 @@
     "build": "rm -rf build && tsc && cp src/index.html build",    "start": "node build/index.js",
     "serve": "http-server build"
   },
-  "author": "",
+  "author": "Stephen Dodd",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^13.0.2",

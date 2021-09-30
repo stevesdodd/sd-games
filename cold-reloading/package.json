@@ -1,0 +1,22 @@
+{
+  "name": "cold-reloading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build && tsc && cp src/index.html build",
+    "start": "node build/index.js",
+    "serve": "http-server build",
+    "dev": "run-p watch serve",
+    "watch": "onchange \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- npm run build"  
+  },
+  "author": "Stephen Dodd",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^13.0.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "typescript": "^4.4.3"
+  }
+}
