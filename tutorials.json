@@ -11,6 +11,11 @@
       "description": "A basic typescript web app setup."
     },
     {
+      "name": "Cold reloading",
+      "link": "cold-reloading",
+      "description": "This example includes cold reloading to automatically rebuild the project during local development. There's not much to look at here but checkout the code on the previous page."
+    },
+    {
       "name": "Canvas operations",
       "link": "canvas-operations",
       "description": "The above scene is drawn onto a html canvas using common context operations."
