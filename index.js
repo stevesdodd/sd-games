@@ -13,6 +13,7 @@ fetch('./tutorials.json')
       newDiv.style.margin = "1rem"
       newDiv.style.display = "flex"
       newDiv.style.justifyContent = "center"
+      newDiv.style.alignItems = "center"
 
       let p = document.createElement('p')
       p.innerHTML = tutorial.name

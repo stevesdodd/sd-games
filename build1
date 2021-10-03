@@ -22,7 +22,13 @@ for k in $(jq '.tutorials | keys | .[]' tutorials.json); do
   cp -R "${link}/build" "build/${link}"
 
   # Add name
-  sed $SEDOPTION -e "/<\/head>/p; s/<\/head>/<h2 class='hide'>${name}<\/h2>/" build/${link}/index.html 
+  sed $SEDOPTION -e "/<\/head>/p; s/<\/head>/<h2 style = 'margin-bottom: 2rem; margin-top: 2rem;' class='hide'>${name}<\/h2>/" build/${link}/index.html 
+
+  # Add link to code
+  sed $SEDOPTION -e "/<\/head>/p; s/<\/head>/<a style='padding-left: 1rem;' class='hide' href=\'https:\/\/github.com\/stevesdodd\/sd-games\/tree\/master\/${link}'>Code<\/a>/" build/${link}/index.html 
+
+  # Add link to my website
+  sed $SEDOPTION -e '/<\/head>/p; s/<\/head>/<a style="padding-left: 1rem;" class="hide" href=\"https:\/\/stephendoddtech.com\/categories\/game-dev">Stephen Dodd Tech Game Development<\/a>/' build/${link}/index.html 
 
   # Add back link
   sed $SEDOPTION -e '/<\/head>/p; s/<\/head>/<a class="hide" href=\"..\/\">Back<\/a>/' build/${link}/index.html 
