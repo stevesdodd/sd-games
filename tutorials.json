@@ -4,31 +4,6 @@
     "name": "Basic javascript env",
     "link": "basic-javascript-env",
     "description": "A basic javascript web app setup."
-    },
-    {
-      "name": "Basic typescript env",
-      "link": "basic-typescript-env",
-      "description": "A basic typescript web app setup."
-    },
-    {
-      "name": "Cold reloading",
-      "link": "cold-reloading",
-      "description": "This example includes cold reloading to automatically rebuild the project during local development. There's not much to look at here but checkout the code on the previous page."
-    },
-    {
-      "name": "Canvas operations",
-      "link": "canvas-operations",
-      "description": "The above scene is drawn onto a html canvas using common context operations."
-    },
-    {
-      "name": "Keyboard input events",
-      "link": "keyboard-input-events",
-      "description": "Demonstrating listening to keyboard input and outputting the codes."
-    },
-    {
-      "name": "Basic gameloop",
-      "link": "basic-gameloop",
-      "description": "A scene to demonstrate a basic game loop where a square's position is randomly generated and updated periodically via the game loop."
     }
   ]
 }

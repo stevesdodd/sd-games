@@ -1,8 +1,6 @@
 ## SD Games
 
-Welcome to SD Games, this repository houses all the code related to TODO: Insert website.
-
-For tutorials relating to these projects see TODO insert website here.
+Welcome to SD Games, this repository houses all the code related to the game development tutorials at [Stephen Dodd Tech Game Development](https://stephendoddtech.com/categories/game-dev).
 
 The example projects can be found at [sd-games](https://stevesdodd.github.io/sd-games/).
 
