@@ -1,6 +1,6 @@
 ## SD Games
 
-Welcome to SD Games, this repository houses all the code related to the game development tutorials at [Stephen Dodd Tech Game Development](https://stephendoddtech.com/categories/game-dev).
+Welcome to SD Games, this repository houses all the code related to the game development tutorials at [Stephen Dodd Tech Game Development](https://stephendoddtech.com/categories/game-development).
 
 The example projects can be found at [sd-games](https://stevesdodd.github.io/sd-games/).
 
