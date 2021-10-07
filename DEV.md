@@ -1,4 +1,4 @@
-# SD Games Dev Readme
+# Stephen Dodd Games Design Readme
 
 **Building the projects**
 

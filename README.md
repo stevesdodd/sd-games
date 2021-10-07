@@ -1,8 +1,8 @@
 [![Deploy](https://github.com/stevesdodd/sd-games/actions/workflows/main.yml/badge.svg)](https://github.com/stevesdodd/sd-games/actions/workflows/main.yml)
 
-## SD Games
+## Stephen Dodd Games
 
-Welcome to SD Games, this repository houses all the code related to the game development tutorials at [Stephen Dodd Tech Game Design](https://stephendoddtech.com/category/game-design).
+Welcome to Stephen Dodd Games, this repository houses all the code related to the game development tutorials at [Stephen Dodd Tech Game Design](https://stephendoddtech.com/category/game-design).
 
 The example projects can be found at [sd-games](https://stevesdodd.github.io/sd-games/).
 
