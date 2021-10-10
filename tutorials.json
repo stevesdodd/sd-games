@@ -3,7 +3,12 @@
     {
     "name": "Basic javascript env",
     "link": "basic-javascript-env",
-    "description": "A basic javascript web app setup."
-    }
+    "description": "A simple javascript game environment to create html5 canvas games using npm node scripts."
+    },
+    {
+      "name": "Simple typescript canvas game project setup",
+      "link": "simple-typescript-canvas-game-project-setup",
+      "description": "A simple typescript game project structure to create html5 canvas games using npm node scripts."
+      }
   ]
 }

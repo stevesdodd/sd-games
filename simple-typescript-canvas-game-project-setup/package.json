@@ -1,11 +1,12 @@
 {
-  "name": "basic-typescript-env",
+  "name": "simple-typescript-canvas-game-project-setup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && tsc && cp src/index.html build",    "start": "node build/index.js",
+    "build": "rm -rf build && tsc && cp src/index.html build",
+    "start": "node build/index.js",
     "serve": "http-server build"
   },
   "author": "Stephen Dodd",
