@@ -1,15 +1,15 @@
 {
-  "name": "cold-reloading",
+  "name": "cold-reloading-typescript-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf build && tsc && cp src/index.html build",
-    "start": "node build/index.js",
     "serve": "http-server build",
+    "watch": "onchange \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- npm run build",
     "dev": "run-p watch serve",
-    "watch": "onchange \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- npm run build"  
+    "start": "node build/index.js"
   },
   "author": "Stephen Dodd",
   "license": "ISC",
