@@ -9,6 +9,11 @@
       "name": "Simple typescript canvas game project setup",
       "link": "simple-typescript-canvas-game-project-setup",
       "description": "A simple typescript game project structure to create html5 canvas games using npm node scripts."
-      }
+    },
+    {
+      "name": "Cold reloading typescript project",
+      "link": "cold-reloading-typescript-project",
+      "description": "A simple typescript game project structure with cold reloading to create html5 canvas games using npm node scripts."
+    }
   ]
 }
