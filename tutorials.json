@@ -14,6 +14,11 @@
       "name": "Cold reloading typescript project",
       "link": "cold-reloading-typescript-project",
       "description": "A simple typescript game project structure with cold reloading to create html5 canvas games using npm node scripts."
+    },
+    {
+      "name": "Canvas operations",
+      "link": "canvas-operations",
+      "description": "A simple typescript game project structure that demonstrates html5 canvas operations."
     }
   ]
 }
