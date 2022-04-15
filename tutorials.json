@@ -19,6 +19,11 @@
       "name": "Canvas operations",
       "link": "basic-canvas-html5-operations",
       "description": "A simple typescript game project structure that demonstrates html5 canvas operations."
+    },
+    {
+      "name": "Keyboard html5 input events",
+      "link": "keyboard-html5-input-events",
+      "description": "A simple typescript game project that demonstrates keyboard html5 input events."
     }
   ]
 }
