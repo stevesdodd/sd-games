@@ -17,7 +17,7 @@
     },
     {
       "name": "Canvas operations",
-      "link": "canvas-operations",
+      "link": "basic-canvas-html5-operations",
       "description": "A simple typescript game project structure that demonstrates html5 canvas operations."
     }
   ]
