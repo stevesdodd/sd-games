@@ -26,9 +26,9 @@
       "description": "A simple typescript game project that demonstrates keyboard html5 input events."
     },
     {
-      "name": "Basic gameloop typescript",
-      "link": "basic-gameloop-typescript",
-      "description": "A simple typescript game project that demonstrates a basic gameloop."
+      "name": "Basic game loop typescript",
+      "link": "basic-game-loop-typescript",
+      "description": "A simple typescript game project that demonstrates a basic game loop."
     }
   ]
 }
