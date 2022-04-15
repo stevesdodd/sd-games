@@ -24,6 +24,11 @@
       "name": "Keyboard html5 input events",
       "link": "keyboard-html5-input-events",
       "description": "A simple typescript game project that demonstrates keyboard html5 input events."
+    },
+    {
+      "name": "Basic gameloop typescript",
+      "link": "basic-gameloop-typescript",
+      "description": "A simple typescript game project that demonstrates a basic gameloop."
     }
   ]
 }
