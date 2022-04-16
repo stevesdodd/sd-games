@@ -17,7 +17,7 @@ GameRuntime.gameState = {
     foodPosition: { x: 100, y: 100 },
     direction: 'right',
     speed: 1,
-    isDead: false,
+    gameOver: false,
     score: 0,
     foodSize: 24
 };
@@ -78,13 +78,13 @@ GameRuntime.setup = () => {
     document.addEventListener('keydown', GameRuntime.keyDownHandler, false);
 };
 GameRuntime.loop = (context, canvasWidth, canvasHeight) => {
-    const { isDead, playerPosition, foodPosition, direction, speed, playerSize, foodSize, score } = GameRuntime.gameState;
+    const { gameOver, playerPosition, foodPosition, direction, speed, playerSize, foodSize, score } = GameRuntime.gameState;
     const newPosition = GameRuntime.newPlayerPos(playerPosition.x, playerPosition.y, direction, speed);
-    const gameOver = newPosition.x < 0 || newPosition.x > (canvasWidth - playerSize) || newPosition.y < 0 || newPosition.y > (canvasHeight - playerSize) || isDead;
+    const isGameOver = newPosition.x < 0 || newPosition.x > (canvasWidth - playerSize) || newPosition.y < 0 || newPosition.y > (canvasHeight - playerSize) || gameOver;
     const foodEaten = GameRuntime.squaresOverlap(playerPosition, playerSize, foodPosition, foodSize);
     const newFoodPosition = foodEaten ? GameRuntime.newFoodPos(canvasWidth, canvasHeight) : foodPosition;
-    if (gameOver) {
-        GameRuntime.gameState = Object.assign(Object.assign({}, GameRuntime.gameState), { isDead: true });
+    if (isGameOver) {
+        GameRuntime.gameState = Object.assign(Object.assign({}, GameRuntime.gameState), { gameOver: true });
     }
     else {
         GameRuntime.gameState = Object.assign(Object.assign({}, GameRuntime.gameState), { playerPosition: newPosition, foodPosition: newFoodPosition, score: foodEaten ? score + 1 : score, speed: foodEaten ? speed + 1 : speed, playerSprite: GameRuntime.getSnakeImage(direction) });
@@ -92,12 +92,12 @@ GameRuntime.loop = (context, canvasWidth, canvasHeight) => {
     GameRuntime.draw(context, canvasWidth, canvasHeight, GameRuntime.gameState);
 };
 GameRuntime.draw = (context, canvasWidth, canvasHeight, gameState) => {
-    const { score, speed, isDead, playerSize, playerPosition, playerSprite, foodPosition, foodSize } = gameState;
+    const { score, speed, gameOver, playerSize, playerPosition, playerSprite, foodPosition, foodSize } = gameState;
     context.font = '18px arial';
     context.clearRect(0, 0, canvasWidth, canvasHeight);
     context.fillText(`Blake the Snake - Score: ${score}, Speed: ${speed}`, 30, 30);
     context.drawImage(playerSprite, playerPosition.x, playerPosition.y, playerSize, playerSize);
     context.drawImage(apple, foodPosition.x, foodPosition.y, foodSize, foodSize);
-    isDead && context.fillText('GAMEOVER', canvasWidth / 2 - 50, canvasHeight / 2);
+    gameOver && context.fillText('GAMEOVER', canvasWidth / 2 - 50, canvasHeight / 2);
 };
 export default GameRuntime;
