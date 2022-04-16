@@ -29,6 +29,11 @@
       "name": "Basic game loop typescript",
       "link": "basic-game-loop-typescript",
       "description": "A simple typescript game project that demonstrates a basic game loop."
+    },
+    {
+      "name": "Blake the snake game",
+      "link": "blake-the-snake-game",
+      "description": "Blake the snake is a simple typescript game that utilises everything covered in the intro to typescript game tutorial series."
     }
   ]
 }
