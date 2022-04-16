@@ -24,7 +24,7 @@ jobs:
       - name: install and build
         run: |
           npm install
-          ./build1
+          ./build-games
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
