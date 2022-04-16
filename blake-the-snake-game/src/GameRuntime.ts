@@ -23,7 +23,7 @@ type GameState = {
   foodPosition: Position
   direction: Direction
   speed: number
-  isDead: boolean
+  gameOver: boolean
   score: number
   foodSize: number
 }
@@ -36,7 +36,7 @@ class GameRuntime {
     foodPosition: { x: 100, y: 100},
     direction: 'right',
     speed: 1,
-    isDead: false,
+    gameOver: false,
     score: 0,
     foodSize: 24
   }
@@ -105,17 +105,17 @@ class GameRuntime {
   }
 
   static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
-    const {isDead, playerPosition, foodPosition, direction, speed, playerSize, foodSize, score} = GameRuntime.gameState
+    const {gameOver, playerPosition, foodPosition, direction, speed, playerSize, foodSize, score} = GameRuntime.gameState
 
     const newPosition = GameRuntime.newPlayerPos(playerPosition.x, playerPosition.y, direction, speed)
-    const gameOver = newPosition.x < 0 || newPosition.x > (canvasWidth - playerSize) || newPosition.y < 0 || newPosition.y > (canvasHeight - playerSize) || isDead
+    const isGameOver = newPosition.x < 0 || newPosition.x > (canvasWidth - playerSize) || newPosition.y < 0 || newPosition.y > (canvasHeight - playerSize) || gameOver
     const foodEaten = GameRuntime.squaresOverlap(playerPosition, playerSize, foodPosition, foodSize)
     const newFoodPosition = foodEaten ? GameRuntime.newFoodPos(canvasWidth, canvasHeight) : foodPosition
 
-    if (gameOver) {
+    if (isGameOver) {
       GameRuntime.gameState = {
         ...GameRuntime.gameState,
-        isDead: true
+        gameOver: true
       }
     } else {
       GameRuntime.gameState = {
@@ -132,14 +132,14 @@ class GameRuntime {
   }
 
   private static draw = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number, gameState: GameState) => {
-    const {score, speed, isDead, playerSize, playerPosition, playerSprite, foodPosition, foodSize} = gameState
+    const {score, speed, gameOver, playerSize, playerPosition, playerSprite, foodPosition, foodSize} = gameState
   
     context.font = '18px arial'
     context.clearRect(0, 0, canvasWidth, canvasHeight)
     context.fillText(`Blake the Snake - Score: ${score}, Speed: ${speed}`, 30, 30)
     context.drawImage(playerSprite, playerPosition.x, playerPosition.y, playerSize, playerSize);
     context.drawImage(apple, foodPosition.x, foodPosition.y, foodSize, foodSize);
-    isDead && context.fillText('GAMEOVER', canvasWidth / 2 - 50, canvasHeight / 2)
+    gameOver && context.fillText('GAMEOVER', canvasWidth / 2 - 50, canvasHeight / 2)
   }
 }
 
