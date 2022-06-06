@@ -34,6 +34,11 @@
       "name": "Blake the snake game",
       "link": "blake-the-snake-game",
       "description": "Blake the snake is a simple typescript game that utilises everything covered in the intro to typescript game tutorial series."
+    }, 
+    {
+      "name": "Mouse event listener input html canvas",
+      "link": "mouse-event-listener-input-html-canvas",
+      "description": "This example demonstrates basic mouse input events for a simple typescript game project structure to create html5 canvas games."
     }
   ]
 }
