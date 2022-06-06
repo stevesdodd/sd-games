@@ -5,7 +5,7 @@ class GameRuntime {
   static gameState: GameState = {
   }
 
-  static setup = () => {
+  static setup = (canvas: HTMLCanvasElement, context: CanvasRenderingContext2D) => {
   }
 
   static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
