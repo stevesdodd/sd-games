@@ -28,6 +28,10 @@ fetch('./tutorials.json')
       codeA.setAttribute('href', 'https://github.com/stevesdodd/sd-games/tree/master/'+tutorial.link)
       codeA.innerHTML = 'Code'
 
+      let blogA = document.createElement('a')
+      blogA.setAttribute('href', 'https://stephendoddtech.com/blog/game-design/'+tutorial.link)
+      blogA.innerHTML = 'Blog'
+
       codeA.style.padding= "4px";
       codeA.style.margin = "4px";
       codeA.style.background = "lightBlue";
@@ -40,9 +44,16 @@ fetch('./tutorials.json')
       linkA.style.borderRadius = "4px"
       linkA.style.textDecoration = "none"
 
+      blogA.style.padding= "4px";
+      blogA.style.margin = "4px";
+      blogA.style.background = "lightBlue";
+      blogA.style.borderRadius = "4px"
+      blogA.style.textDecoration = "none"
+
       newDiv.appendChild(p)
       newDiv.appendChild(linkA);
       newDiv.appendChild(codeA)
+      newDiv.appendChild(blogA);
 
       tutorialsDiv.appendChild(newDiv, tutorialsDiv);
 
