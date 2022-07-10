@@ -1,9 +1,9 @@
 {
   "tutorials": [
     {
-    "name": "Basic javascript env",
-    "link": "basic-javascript-env",
-    "description": "A simple javascript game environment to create html5 canvas games using npm node scripts."
+      "name": "Basic javascript env",
+      "link": "basic-javascript-env",
+      "description": "A simple javascript game environment to create html5 canvas games using npm node scripts."
     },
     {
       "name": "Simple typescript canvas game project setup",

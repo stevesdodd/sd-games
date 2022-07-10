@@ -8,7 +8,7 @@ canvas.height = 3 * canvas.width / 4
 window.onload = function() {
   if (context) {
 
-    GameRuntime.setup()
+    GameRuntime.setup(canvas, context)
     const loopTimeout = 1000 / 60
     setInterval(GameRuntime.loop, loopTimeout, context, canvas.width, canvas.height)
   }
