@@ -2,8 +2,8 @@ import { GameState, PlayerState } from "./types/types.js";
 
 export const InitialPlayerState: PlayerState = {
   position: {
-    x: 50,
-    y: 50
+    x: 100,
+    y: 100
   },
   direction: {
     horizontal: 0,
