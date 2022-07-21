@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && tsc && cp src/index.html build && cp favicon.ico build && cp src/*.png build",
+    "build": "rm -rf build && tsc && cp src/index.html build && cp favicon.ico build",
     "serve": "run-p watch serve1",
     "serve1": "http-server build",
     "watch": "onchange \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- npm run build"
