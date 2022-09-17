@@ -1,6 +1,6 @@
 import GameRuntime from "./GameRuntime.js"
 
-export class KeyboardController {
+export class KeyboardManager {
 
   private static keyDown = (event: KeyboardEvent) => {
     if (event.key === 'f') {
@@ -71,7 +71,7 @@ export class KeyboardController {
   }
 
   constructor() {
-    window.addEventListener('keydown', KeyboardController.keyDown)
-    window.addEventListener('keyup', KeyboardController.keyUp)
+    window.addEventListener('keydown', KeyboardManager.keyDown)
+    window.addEventListener('keyup', KeyboardManager.keyUp)
   }
 }
