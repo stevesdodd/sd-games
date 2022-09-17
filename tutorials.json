@@ -59,6 +59,11 @@
       "name": "Gamepad input Javascript game",
       "link": "gamepad-input-javascript-game",
       "description": "An example for enabling gamepad controller input in a HTML5 Javascript Typescript game."
+    },
+    {
+      "name": "Mutiplayer javascript game input",
+      "link": "multiplayer-javascript-game-input",
+      "description": "An example for enabling multiplayer input in a HTML5 Javascript Typescript game."
     }
   ]
 }
