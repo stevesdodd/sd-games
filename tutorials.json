@@ -49,6 +49,11 @@
       "name": "Keyboard event game input map",
       "link": "keyboard-event-game-input-map",
       "description": "Example of 2d game player movement on how to create a generic player input map control system for HTML keyboard events in a javascript typescript game."
+    },
+    {
+      "name": "Command pattern standard input",
+      "link": "command-pattern-standard-input",
+      "description": "An example that implements the command pattern for standard keyboard input in a HTML5 Javascript Typescript game."
     }
   ]
 }
