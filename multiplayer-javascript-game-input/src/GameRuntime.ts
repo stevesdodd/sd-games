@@ -1,0 +1,53 @@
+import { Draw } from "./Draw.js"
+import { InitialGameState } from "./GameConstants.js"
+import { InputManager } from "./input/InputManager.js"
+import { InputStateManager } from "./input/InputStateManager.js"
+import { KeyboardManager } from "./input/KeyboardManager.js"
+import { Player } from "./Player.js"
+import { GameState } from "./types/types.js"
+
+class GameRuntime {
+  static gameState: GameState = InitialGameState
+
+  static setup = (canvas: HTMLCanvasElement, context: CanvasRenderingContext2D) => {
+    new KeyboardManager()
+  }
+
+  static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
+
+    const inputState = InputStateManager.getInputs()
+
+    const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings, inputState)
+
+    const player1State = Player.getPlayerState(inputs.player1, GameRuntime.gameState.player1)
+    const player2State = Player.getPlayerState(inputs.player2, GameRuntime.gameState.player2)
+    const player3State = Player.getPlayerState(inputs.player3, GameRuntime.gameState.player3)
+    const player4State = Player.getPlayerState(inputs.player4, GameRuntime.gameState.player4)
+  
+    GameRuntime.gameState.player1 = player1State
+    GameRuntime.gameState.player2 = player2State
+    GameRuntime.gameState.player3 = player3State
+    GameRuntime.gameState.player4 = player4State
+  
+    GameRuntime.gameState.inputs.standardGameInputFourPlayer.player1 = inputs.player1
+    GameRuntime.gameState.inputs.standardGameInputFourPlayer.player2 = inputs.player2
+    GameRuntime.gameState.inputs.standardGameInputFourPlayer.player3 = inputs.player3
+    GameRuntime.gameState.inputs.standardGameInputFourPlayer.player4 = inputs.player4
+    
+    GameRuntime.draw(context, canvasWidth, canvasHeight, GameRuntime.gameState)
+  }
+
+  private static draw = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number, gameState: GameState) => {
+    Draw.resetCanvas(context, canvasWidth, canvasHeight)
+
+    context.fillText(`P1: ${JSON.stringify(GameRuntime.gameState.player1.direction)}`, 0, 10)
+    context.fillText(`P2: ${JSON.stringify(GameRuntime.gameState.player2.direction)}`, 0, 30)
+    context.fillText(`P1: ${JSON.stringify(GameRuntime.gameState.inputs.standardGameInputFourPlayer.player1)}`, 0, 50)
+    context.fillText(`P2: ${JSON.stringify(GameRuntime.gameState.inputs.standardGameInputFourPlayer.player2)}`, 0, 70)
+    
+    Draw.drawPlayer(context, gameState.player1)
+    Draw.drawPlayer(context, gameState.player2)
+  }
+}
+
+export default GameRuntime
