@@ -44,6 +44,11 @@
       "name": "Keyboard input player controller 2d",
       "link": "keyboard-input-player-controller-2d",
       "description": "This is part of a series demonstrating the command pattern for 2d game player movement. This demonstrates a basic keyboard input controller for 2d movement (up, down, left, right)."
+    },
+    {
+      "name": "Keyboard event game input map",
+      "link": "keyboard-event-game-input-map",
+      "description": "Example of 2d game player movement on how to create a generic player input map control system for HTML keyboard events in a javascript / typescript game."
     }
   ]
 }
