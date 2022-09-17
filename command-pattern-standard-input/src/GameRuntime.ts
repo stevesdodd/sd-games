@@ -13,10 +13,7 @@ class GameRuntime {
   }
 
   static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
-
     const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings.player1)
-
-    //This would hold physics properties such as velocity if this was a physics game.
     const player1State = Player.getPlayerState(inputs, GameRuntime.gameState.player1)
 
     GameRuntime.gameState.player1 = player1State

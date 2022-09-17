@@ -1,17 +1,17 @@
 import { GameKeyboardMapping, KeyboardState, StandardGameInput } from "./types.js";
 
-export const StandardGameInputStateNeutral: StandardGameInput = {
-  axis: {
-    discrete: {
-      x: 0,
-      y: 0
-    },
+export const KeyboardMappingNeutral: GameKeyboardMapping = {
+  direction: {
+    up: ['w'],
+    down: ['s'],
+    right: ['d'],
+    left: ['a']
   },
-  actions: {
-    primary: 'not-pressed',
-    secondary: 'not-pressed',
-    button3: 'not-pressed',
-    button4: 'not-pressed'
+  buttons: {
+    primary: ['f'],
+    secondary: ['g'],
+    button3: ['h'],
+    button4: ['j']
   }
 }
 
@@ -26,17 +26,17 @@ export const KeyboardStateNeutral: KeyboardState = {
   j: 'not-pressed'
 }
 
-export const KeyboardMappingNeutral: GameKeyboardMapping = {
-  direction: {
-    up: ['w'],
-    down: ['s'],
-    right: ['d'],
-    left: ['a']
+export const StandardGameInputStateNeutral: StandardGameInput = {
+  axis: {
+    discrete: {
+      x: 0,
+      y: 0
+    },
   },
-  buttons: {
-    primary: ['f'],
-    secondary: ['g'],
-    button3: ['h'],
-    button4: ['j']
+  actions: {
+    primary: 'not-pressed',
+    secondary: 'not-pressed',
+    button3: 'not-pressed',
+    button4: 'not-pressed'
   }
 }
