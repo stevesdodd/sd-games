@@ -1,6 +1,6 @@
 import { Draw } from "./Draw.js";
 import { InitialGameState } from "./GameConstants.js";
-import { KeyboardManager } from "./KeyboardManager.js";
+import { KeyboardManager } from "./input/KeyboardManager.js";
 import { Player } from "./Player.js";
 class GameRuntime {
 }

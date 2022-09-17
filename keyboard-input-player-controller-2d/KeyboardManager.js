@@ -1,11 +1,11 @@
 import GameRuntime from "./GameRuntime.js";
-export class KeyboardController {
+export class KeyboardManager {
     constructor() {
-        window.addEventListener('keydown', KeyboardController.keyDown);
-        window.addEventListener('keyup', KeyboardController.keyUp);
+        window.addEventListener('keydown', KeyboardManager.keyDown);
+        window.addEventListener('keyup', KeyboardManager.keyUp);
     }
 }
-KeyboardController.keyDown = (event) => {
+KeyboardManager.keyDown = (event) => {
     if (event.key === 'f') {
         GameRuntime.gameState.player1.bottom = true;
     }
@@ -31,7 +31,7 @@ KeyboardController.keyDown = (event) => {
         GameRuntime.gameState.player1.direction.horizontal = 1;
     }
 };
-KeyboardController.keyUp = (event) => {
+KeyboardManager.keyUp = (event) => {
     if (event.key === 'f') {
         GameRuntime.gameState.player1.bottom = false;
     }
