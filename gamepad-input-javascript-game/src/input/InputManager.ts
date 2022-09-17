@@ -8,16 +8,17 @@ export class InputManager {
 
   static getInputs = (playerInput: PlayerInput): StandardGameInput => {
     const inputState: InputState = InputStateManager.getInputs()
+    const gamepads = navigator.getGamepads()
 
-    return InputManager.getStandardGameInput(playerInput, inputState)
+    return InputManager.getStandardGameInput(playerInput, inputState, gamepads)
   }
 
-  private static getStandardGameInput = (playerInput: PlayerInput, inputState: InputState): StandardGameInput => {
+  private static getStandardGameInput = (playerInput: PlayerInput, inputState: InputState, gamepads: (Gamepad | null)[]): StandardGameInput => {
   
     if (playerInput.current === 'keyboard') {
       return KeyboardTransformer.transform(inputState.keyboard, playerInput.keyboardMapping)
     } else {
-      const gamepad = navigator.getGamepads()[playerInput.current.id]
+      const gamepad = gamepads[playerInput.current.id]
       if (gamepad !== null) {
         return GamepadTransformer.transform(gamepad, playerInput.gamepadMapping)
       } else {

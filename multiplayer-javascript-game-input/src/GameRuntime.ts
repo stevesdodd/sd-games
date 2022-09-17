@@ -15,9 +15,7 @@ class GameRuntime {
 
   static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
 
-    const inputState = InputStateManager.getInputs()
-
-    const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings, inputState)
+    const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings)
 
     const player1State = Player.getPlayerState(inputs.player1, GameRuntime.gameState.player1)
     const player2State = Player.getPlayerState(inputs.player2, GameRuntime.gameState.player2)
