@@ -48,7 +48,7 @@
     {
       "name": "Keyboard event game input map",
       "link": "keyboard-event-game-input-map",
-      "description": "Example of 2d game player movement on how to create a generic player input map control system for HTML keyboard events in a javascript / typescript game."
+      "description": "Example of 2d game player movement on how to create a generic player input map control system for HTML keyboard events in a javascript typescript game."
     }
   ]
 }
