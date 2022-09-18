@@ -1,4 +1,4 @@
-import { PlayerInputs } from "../input/types"
+import { PlayerInputs } from "../input/types.js"
 
 export type Vector2DType = {
   x: number,
