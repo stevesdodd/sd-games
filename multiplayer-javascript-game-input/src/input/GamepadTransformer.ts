@@ -54,5 +54,5 @@ export class GamepadTransformer {
     } else {
       return -1
     }
-    }
+  }
 }

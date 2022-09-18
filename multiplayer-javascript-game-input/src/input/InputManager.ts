@@ -10,12 +10,12 @@ export class InputManager {
 
     const inputState = InputStateManager.getInputs()
     const gamepads = navigator.getGamepads()
-
+  
     const player1StandardGameInput = InputManager.getStandardGameInput(playerInputs.player1, inputState, gamepads)
     const player2StandardGameInput = InputManager.getStandardGameInput(playerInputs.player2, inputState, gamepads)
     const player3StandardGameInput = InputManager.getStandardGameInput(playerInputs.player3, inputState, gamepads)
     const player4StandardGameInput = InputManager.getStandardGameInput(playerInputs.player4, inputState, gamepads)
-
+  
     return {
       player1: player1StandardGameInput,
       player2: player2StandardGameInput,
@@ -24,8 +24,7 @@ export class InputManager {
     }
   }
 
-  private static getStandardGameInput = (playerInput: PlayerInput, inputState: InputState, gamepads: (Gamepad | null)[]): StandardGameInput => {
-  
+  private static getStandardGameInput = (playerInput: PlayerInput, inputState: InputState, gamepads: (Gamepad | null)[]): StandardGameInput => {   
     if (playerInput.current === 'keyboard') {
       return KeyboardTransformer.transform(inputState.keyboard, playerInput.keyboardMapping)
     } else {
