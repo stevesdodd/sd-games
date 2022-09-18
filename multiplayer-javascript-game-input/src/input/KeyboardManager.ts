@@ -1,3 +1,4 @@
+
 import { KeyboardStateNeutral } from "./Constants.js"
 import { KeyboardState, SupportedKeys } from "./types.js"
 
@@ -20,7 +21,7 @@ export class KeyboardManager {
       KeyboardManager.keyboardState[event.key] = 'not-pressed'
     }
   }
-
+  
   constructor() {
     window.addEventListener('keydown', KeyboardManager.keyDown)
     window.addEventListener('keyup', KeyboardManager.keyUp)

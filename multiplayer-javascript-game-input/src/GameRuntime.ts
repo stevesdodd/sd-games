@@ -1,7 +1,6 @@
 import { Draw } from "./Draw.js"
 import { InitialGameState } from "./GameConstants.js"
 import { InputManager } from "./input/InputManager.js"
-import { InputStateManager } from "./input/InputStateManager.js"
 import { KeyboardManager } from "./input/KeyboardManager.js"
 import { Player } from "./Player.js"
 import { GameState } from "./types/types.js"
@@ -14,7 +13,6 @@ class GameRuntime {
   }
 
   static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
-
     const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings)
 
     const player1State = Player.getPlayerState(inputs.player1, GameRuntime.gameState.player1)
@@ -31,7 +29,7 @@ class GameRuntime {
     GameRuntime.gameState.inputs.standardGameInputFourPlayer.player2 = inputs.player2
     GameRuntime.gameState.inputs.standardGameInputFourPlayer.player3 = inputs.player3
     GameRuntime.gameState.inputs.standardGameInputFourPlayer.player4 = inputs.player4
-    
+  
     GameRuntime.draw(context, canvasWidth, canvasHeight, GameRuntime.gameState)
   }
 
@@ -45,6 +43,8 @@ class GameRuntime {
     
     Draw.drawPlayer(context, gameState.player1)
     Draw.drawPlayer(context, gameState.player2)
+    Draw.drawPlayer(context, gameState.player3)
+    Draw.drawPlayer(context, gameState.player4)
   }
 }
 

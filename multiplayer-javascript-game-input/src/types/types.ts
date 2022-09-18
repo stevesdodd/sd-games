@@ -1,4 +1,4 @@
-import { PlayerInputs, StandardGameInputFourPlayer } from "../input/types"
+import { PlayerInputs, StandardGameInputFourPlayer } from "../input/types.js"
 
 export type Vector2DType = {
   x: number,
