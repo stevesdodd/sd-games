@@ -1,8 +1,8 @@
 import { GamepadMappingNeutral, KeyboardMappingNeutral, StandardGameInputStateNeutral } from "./input/Constants.js";
-export const InitialPlayerState = {
+export const InitialPlayer1State = {
     position: {
-        x: 100,
-        y: 100
+        x: 50,
+        y: 50
     },
     direction: {
         horizontal: 0,
@@ -15,8 +15,8 @@ export const InitialPlayerState = {
 };
 export const InitialPlayer2State = {
     position: {
-        x: 100,
-        y: 100
+        x: 200,
+        y: 50
     },
     direction: {
         horizontal: 0,
@@ -29,8 +29,8 @@ export const InitialPlayer2State = {
 };
 export const InitialPlayer3State = {
     position: {
-        x: 100,
-        y: 100
+        x: 50,
+        y: 200
     },
     direction: {
         horizontal: 0,
@@ -43,8 +43,8 @@ export const InitialPlayer3State = {
 };
 export const InitialPlayer4State = {
     position: {
-        x: 100,
-        y: 100
+        x: 200,
+        y: 200
     },
     direction: {
         horizontal: 0,
@@ -58,7 +58,7 @@ export const InitialPlayer4State = {
 export const playerColour = 'black';
 export const playerSize = 50;
 export const InitialGameState = {
-    player1: InitialPlayerState,
+    player1: InitialPlayer1State,
     player2: InitialPlayer2State,
     player3: InitialPlayer3State,
     player4: InitialPlayer4State,
@@ -72,8 +72,8 @@ export const InitialGameState = {
         playerInputMappings: {
             player1: {
                 current: 'keyboard',
-                gamepadMapping: GamepadMappingNeutral,
-                keyboardMapping: KeyboardMappingNeutral
+                keyboardMapping: KeyboardMappingNeutral,
+                gamepadMapping: GamepadMappingNeutral
             },
             player2: {
                 current: { id: 0 },

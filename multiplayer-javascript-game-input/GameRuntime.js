@@ -33,5 +33,7 @@ GameRuntime.draw = (context, canvasWidth, canvasHeight, gameState) => {
     context.fillText(`P2: ${JSON.stringify(GameRuntime.gameState.inputs.standardGameInputFourPlayer.player2)}`, 0, 70);
     Draw.drawPlayer(context, gameState.player1);
     Draw.drawPlayer(context, gameState.player2);
+    Draw.drawPlayer(context, gameState.player3);
+    Draw.drawPlayer(context, gameState.player4);
 };
 export default GameRuntime;
