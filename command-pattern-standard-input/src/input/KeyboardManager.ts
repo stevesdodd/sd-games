@@ -20,7 +20,7 @@ export class KeyboardManager {
       KeyboardManager.keyboardState[event.key] = 'not-pressed'
     }
   }
-
+  
   constructor() {
     window.addEventListener('keydown', KeyboardManager.keyDown)
     window.addEventListener('keyup', KeyboardManager.keyUp)
