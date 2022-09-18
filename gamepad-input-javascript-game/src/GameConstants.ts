@@ -1,5 +1,4 @@
 import { GamepadMappingNeutral, KeyboardMappingNeutral, StandardGameInputStateNeutral } from "./input/Constants.js";
-import { GameKeyboardMapping, KeyboardState } from "./input/types.js";
 import { GameState, PlayerState } from "./types/types.js";
 
 export const InitialPlayerState: PlayerState = {

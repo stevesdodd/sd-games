@@ -13,8 +13,7 @@ export class InputManager {
     return InputManager.getStandardGameInput(playerInput, inputState, gamepads)
   }
 
-  private static getStandardGameInput = (playerInput: PlayerInput, inputState: InputState, gamepads: (Gamepad | null)[]): StandardGameInput => {
-  
+  private static getStandardGameInput = (playerInput: PlayerInput, inputState: InputState, gamepads: (Gamepad | null)[]): StandardGameInput => {   
     if (playerInput.current === 'keyboard') {
       return KeyboardTransformer.transform(inputState.keyboard, playerInput.keyboardMapping)
     } else {

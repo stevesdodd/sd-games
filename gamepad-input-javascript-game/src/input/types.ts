@@ -17,8 +17,8 @@ export type GameKeyboardMapping = {
 
 export type PlayerInput = {
   current: InputType,
-  gamepadMapping: GamepadMapping,
-  keyboardMapping: GameKeyboardMapping
+  keyboardMapping: GameKeyboardMapping,
+  gamepadMapping: GamepadMapping
 }
 
 export type PlayerInputs = {
