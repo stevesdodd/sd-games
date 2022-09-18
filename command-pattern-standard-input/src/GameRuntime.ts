@@ -15,10 +15,10 @@ class GameRuntime {
   static loop = (context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) => {
     const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings.player1)
     const player1State = Player.getPlayerState(inputs, GameRuntime.gameState.player1)
-
+  
     GameRuntime.gameState.player1 = player1State
     GameRuntime.gameState.inputs.standardGameInputFourPlayer.player1 = inputs
-
+  
     GameRuntime.draw(context, canvasWidth, canvasHeight, GameRuntime.gameState)
   }
 
