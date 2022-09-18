@@ -1,7 +1,6 @@
 import { Draw } from "./Draw.js";
 import { InitialGameState } from "./GameConstants.js";
 import { InputManager } from "./input/InputManager.js";
-import { InputStateManager } from "./input/InputStateManager.js";
 import { KeyboardManager } from "./input/KeyboardManager.js";
 import { Player } from "./Player.js";
 class GameRuntime {
@@ -11,8 +10,7 @@ GameRuntime.setup = (canvas, context) => {
     new KeyboardManager();
 };
 GameRuntime.loop = (context, canvasWidth, canvasHeight) => {
-    const inputState = InputStateManager.getInputs();
-    const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings, inputState);
+    const inputs = InputManager.getInputs(GameRuntime.gameState.inputs.playerInputMappings);
     const player1State = Player.getPlayerState(inputs.player1, GameRuntime.gameState.player1);
     const player2State = Player.getPlayerState(inputs.player2, GameRuntime.gameState.player2);
     const player3State = Player.getPlayerState(inputs.player3, GameRuntime.gameState.player3);

@@ -1,9 +1,11 @@
 import { StandardGameInputStateNeutral } from "./Constants.js";
 import { GamepadTransformer } from "./GamepadTransformer.js";
+import { InputStateManager } from "./InputStateManager.js";
 import { KeyboardTransformer } from "./KeyboardTransformer.js";
 export class InputManager {
 }
-InputManager.getInputs = (playerInputs, inputState) => {
+InputManager.getInputs = (playerInputs) => {
+    const inputState = InputStateManager.getInputs();
     const gamepads = navigator.getGamepads();
     const player1StandardGameInput = InputManager.getStandardGameInput(playerInputs.player1, inputState, gamepads);
     const player2StandardGameInput = InputManager.getStandardGameInput(playerInputs.player2, inputState, gamepads);
