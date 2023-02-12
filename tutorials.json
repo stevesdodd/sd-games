@@ -71,9 +71,9 @@
       "description": "Copy a deeply nested Javascript Typescript object by value vs reference for game development using structuredClone."
     },
     {
-      "name": "Javascript advanced gameloop design",
-      "link": "javascript-advanced-gameloop-design",
-      "description": "The first lesson in a course that teaches how to design an advanced gameloop in Javascript that handles lag and different framerates."
+      "name": "Javascript advanced game loop design",
+      "link": "javascript-advanced-game-loop-design",
+      "description": "The first lesson in a course that teaches how to design an advanced game loop in Javascript that handles lag and different framerates."
     }
   ]
 }
