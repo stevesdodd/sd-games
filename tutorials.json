@@ -74,6 +74,11 @@
       "name": "Javascript advanced game loop design",
       "link": "javascript-advanced-game-loop-design",
       "description": "The first lesson in a course that teaches how to design an advanced game loop in Javascript that handles lag and different framerates."
+    },
+    {
+      "name": "Javascript request animation frame draw cycle",
+      "link": "javascript-request-animation-frame",
+      "description": "In this tutorial we discuss how requestAnimationFrame is preferred over `setInterval` for a more performant draw game loop lifecycle."
     }
   ]
 }
