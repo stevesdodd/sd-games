@@ -79,6 +79,11 @@
       "name": "Javascript request animation frame draw cycle",
       "link": "javascript-request-animation-frame",
       "description": "In this tutorial we discuss how requestAnimationFrame is preferred over `setInterval` for a more performant draw game loop lifecycle."
+    },
+    {
+      "name": "Javascript web worker set interval game loop",
+      "link": "javascript-web-worker-set-interval-game-loop",
+      "description": "Use a Javascript web worker and setInterval to power a game loop that continues running even when the browser is inactive."
     }
   ]
 }
