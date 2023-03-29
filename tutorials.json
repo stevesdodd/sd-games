@@ -84,6 +84,11 @@
       "name": "Javascript web worker set interval game loop",
       "link": "javascript-web-worker-set-interval-game-loop",
       "description": "Use a Javascript web worker and setInterval to power a game loop that continues running even when the browser is inactive."
+    },
+    {
+      "name": "Variable delta time javascript game loop",
+      "link": "variable-delta-time-javascript-game-loop",
+      "description": "Learn and create a variable delta time javascript game loop. This game loop will perform more consistently accross slower and faster computers running at different frame per second."
     }
   ]
 }
