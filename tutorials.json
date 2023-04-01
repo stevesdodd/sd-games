@@ -94,6 +94,11 @@
       "name": "Fixed delta time javascript game loop",
       "link": "fixed-delta-time-javascript-game-loop",
       "description": "Learn and create a fixed delta time javascript game loop. This game loop will create deterministic game play and perform more consistently across slower and faster computers."
+    },
+    {
+      "name": "Spiral of death game loop Javascript",
+      "link": "spiral-of-death-game-loop-javascript",
+      "description": "Learn about how a spiral of death in a game loop occurs when the game lag is too large and how to prevent it."
     }
   ]
 }
