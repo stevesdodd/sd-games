@@ -42,7 +42,8 @@ export type GameState = {
   },
   engine1: {
     timePreviousLoop: number,
-    startTime: number
+    startTime: number,
+    lag: number
   },
   engine2: {
     timePreviousLoop: number,

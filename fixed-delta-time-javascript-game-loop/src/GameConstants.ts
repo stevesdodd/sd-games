@@ -105,7 +105,7 @@ export const InitialGameState: GameState = {
         x: 0, y: 200
       },
       velocity: {
-        x: 80,
+        x: 5,
         y: 0
       }
     },
@@ -121,7 +121,8 @@ export const InitialGameState: GameState = {
   },
   engine1: {
     timePreviousLoop: 0,
-    startTime: 0
+    startTime: 0,
+    lag: 0
   },
   engine2: {
     timePreviousLoop: 0,
