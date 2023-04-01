@@ -73,7 +73,7 @@
     {
       "name": "Javascript advanced game loop design",
       "link": "javascript-advanced-game-loop-design",
-      "description": "The first lesson in a course that teaches how to design an advanced game loop in Javascript that handles lag and different framerates."
+      "description": "The first lesson in a course that teaches how to design an advanced game loop in Javascript that handles lag and different frame rates."
     },
     {
       "name": "Javascript request animation frame draw cycle",
@@ -88,7 +88,12 @@
     {
       "name": "Variable delta time javascript game loop",
       "link": "variable-delta-time-javascript-game-loop",
-      "description": "Learn and create a variable delta time javascript game loop. This game loop will perform more consistently accross slower and faster computers running at different frame per second."
+      "description": "Learn and create a variable delta time javascript game loop. This game loop will perform more consistently across slower and faster computers running at different frame per second."
+    },
+    {
+      "name": "Fixed delta time javascript game loop",
+      "link": "fixed-delta-time-javascript-game-loop",
+      "description": "Learn and create a fixed delta time javascript game loop. This game loop will create deterministic game play and perform more consistently across slower and faster computers."
     }
   ]
 }
