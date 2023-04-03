@@ -12,7 +12,7 @@ for k in $(jq '.tutorials | keys | .[]' tutorials.json); do
   link=$(jq -r ".tutorials[$k].link" tutorials.json);
   description=$(jq -r ".tutorials[$k].description" tutorials.json);
 
-  a+="<div><div>$name <a href=$link>Example</a> <a href='https://github.com/stevesdodd/sd-games/tree/master/${link}'>Code</a> <a href='https://stephendoddtech.com/blog/game-design/$link'>Blog</a></div><div>${description}</div></div>"
+  a+="<div><div>$name <a href='https://stevesdodd.github.io/sd-games/${link}'>Example</a> <a href='https://github.com/stevesdodd/sd-games/tree/master/${link}'>Code</a> <a href='https://stephendoddtech.com/blog/game-design/$link'>Blog</a></div><div>${description}</div></div>"
 
 done
 
